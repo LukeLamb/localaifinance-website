@@ -1,20 +1,20 @@
 # 🚀 Gaia Financial Assistant Website
 
-## Local AI-Powered Financial Analysis & Portfolio Tracking for Belgian Investors
+## Local AI-Powered Financial Analysis & Portfolio Tracking for Global Investors
 
 ![Gaia Financial Assistant](./assets/neurotrader_icon.png)
 
 ## Overview
 
-Gaia Financial Assistant is a privacy-first AI financial intelligence platform designed specifically for Belgian investors. Our website showcases the power of local AI processing for financial analysis while maintaining complete data sovereignty.
+Gaia Financial Assistant is a privacy-first AI financial intelligence platform designed for investors worldwide. Our website showcases the power of local AI processing for financial analysis while maintaining complete data sovereignty.
 
 ## Features
 
 - 🤖 **Local AI Processing** - All analysis happens on your computer using Ollama
-- 📧 **Email Intelligence** - Automated Dutch financial email processing
-- 📊 **Portfolio Tracking** - Real-time performance analysis with EU formatting
+- 📧 **Email Intelligence** - Automated financial email processing with multi-language support
+- 📊 **Portfolio Tracking** - Real-time performance analysis with multi-currency formatting
 - 🔒 **Complete Privacy** - Your financial data never leaves your machine
-- 🇧🇪 **Belgian Optimized** - Designed for Bolero, KBC, and local brokers
+- � **Global Support** - Designed for brokers and platforms worldwide
 - 📱 **Mobile Responsive** - Perfect experience across all devices
 
 ## Technology Stack
@@ -102,7 +102,7 @@ This website is optimized for Cloudflare Pages deployment with:
 Our blog covers:
 
 - Local AI vs Cloud AI for financial privacy
-- Belgian broker integrations (Bolero, KBC, DeGiro)
+- Global broker integrations and automation
 - GDPR compliance for financial applications
 - Technical development insights
 - Investment automation strategies
@@ -118,7 +118,7 @@ Our blog covers:
 
 Copyright © 2025 NeuroTrader. All rights reserved.
 
-Built with ❤️ for Belgian investors who value privacy and AI-powered financial intelligence.
+Built with ❤️ for global investors who value privacy and AI-powered financial intelligence.
 
 ---
 

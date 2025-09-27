@@ -408,7 +408,7 @@ function addDynamicFAQSchema(userInteractions) {
                 "name": "Can Gaia work with my existing broker accounts?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes! Gaia currently supports portfolio imports from Bolero and KBC through Excel exports, with plans to add more Belgian brokers based on user demand."
+                    "text": "Yes! Gaia currently supports portfolio imports from major brokers worldwide through standard Excel/CSV exports, with plans to add more broker integrations based on user demand."
                 }
             }
         ]
@@ -458,6 +458,6 @@ console.log(`
 📊 Portfolio Tracking
 🔒 Privacy-First Design
 
-Built with ❤️ for Belgian investors
+Built with ❤️ for global investors
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 `);
