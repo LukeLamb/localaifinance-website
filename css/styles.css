@@ -888,6 +888,7 @@ h6 { font-size: 1.125rem; }
     
     .hero-title {
         font-size: 2rem;
+        line-height: 1.2;
     }
     
     .section-title {
@@ -898,6 +899,48 @@ h6 { font-size: 1.125rem; }
     .demo-title,
     .contact-title {
         font-size: 2rem;
+    }
+    
+    /* Ensure mobile layout for hero */
+    .hero-container {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: var(--spacing-xl);
+    }
+    
+    /* Stack buttons vertically */
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    /* Ensure features stack */
+    .features-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--spacing-lg);
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        display: none !important;
+    }
+    
+    /* Stats */
+    .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        text-align: center;
     }
 }
 
