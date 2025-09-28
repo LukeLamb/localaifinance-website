@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Mobile Detection Script -->
+    <script>
+        (function() {
+            // Force mobile detection
+            const isMobile = window.innerWidth <= 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                document.documentElement.classList.add('mobile-device');
+                // Force viewport settings
+                const viewport = document.querySelector('meta[name="viewport"]');
+                if (viewport) {
+                    viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0');
+                }
+            }
+        })();
+    </script>
+    
     <!-- Primary Meta Tags -->
     <title>Gaia Financial Assistant - Local AI-Powered Financial Analysis & Portfolio Tracking</title>
     <meta name="title" content="Gaia Financial Assistant - Local AI-Powered Financial Analysis & Portfolio Tracking">
