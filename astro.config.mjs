@@ -8,7 +8,6 @@ export default defineConfig({
   integrations: [tailwind()],
   compressHTML: true,
   build: {
-    inlineStylesheets: 'never',
     assets: '_astro'
   }
 });
