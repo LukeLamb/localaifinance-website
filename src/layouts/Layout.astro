@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 export interface Props {
   title: string;
   description?: string;
@@ -112,9 +114,6 @@ const fullCanonicalUrl = canonicalUrl || `${siteUrl}${Astro.url.pathname}`;
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="/src/styles/global.css" />
 
     <!-- Enhanced Structured Data -->
     <script type="application/ld+json">
