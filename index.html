@@ -125,11 +125,19 @@
                 <img src="./assets/neurotrader_icon.png" alt="Gaia Financial Assistant Logo" class="nav-logo">
                 <span class="nav-title">Gaia Financial Assistant</span>
             </div>
-            <div class="nav-menu">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#download" class="nav-link">Download</a>
-                <a href="./blog" class="nav-link">Blog</a>
-                <a href="#contact" class="nav-link">Contact</a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" title="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#features" class="nav-link" onclick="closeMobileMenu()">Features</a>
+                <a href="#download" class="nav-link" onclick="closeMobileMenu()">Download</a>
+                <a href="./blog" class="nav-link" onclick="closeMobileMenu()">Blog</a>
+                <a href="#contact" class="nav-link" onclick="closeMobileMenu()">Contact</a>
             </div>
         </div>
     </nav>

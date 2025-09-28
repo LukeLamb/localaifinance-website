@@ -37,9 +37,8 @@ function initScrollAnimations() {
     });
 }
 
-// Dynamic Navbar on Scroll
+// Dynamic Navbar on Scroll - FIXED to not disappear
 function initNavbarScroll() {
-    let lastScrollY = window.scrollY;
     const navbar = document.querySelector('.navbar');
     
     window.addEventListener('scroll', () => {
@@ -52,14 +51,8 @@ function initNavbarScroll() {
             navbar.classList.remove('scrolled');
         }
         
-        // Hide/show navbar on scroll direction (optional enhancement)
-        if (currentScrollY > lastScrollY && currentScrollY > 200) {
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            navbar.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollY = currentScrollY;
+        // REMOVED: Hide/show navbar behavior that was causing issues
+        // Keep navbar always visible with the CSS !important rule
     });
 }
 
@@ -448,6 +441,48 @@ window.GaiaWebsite = {
     trackDownloadAttempt,
     trackDownloadSuccess
 };
+
+// Mobile Menu Functions
+function toggleMobileMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    
+    navMenu.classList.toggle('active');
+    menuBtn.classList.toggle('active');
+    
+    // Prevent body scrolling when menu is open
+    if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+}
+
+function closeMobileMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    
+    navMenu.classList.remove('active');
+    menuBtn.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const navMenu = document.getElementById('navMenu');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (!navMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+        closeMobileMenu();
+    }
+});
+
+// Close mobile menu on window resize
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        closeMobileMenu();
+    }
+});
 
 // Console welcome message
 console.log(`

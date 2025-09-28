@@ -109,6 +109,12 @@ h6 { font-size: 1.125rem; }
     border-bottom: 1px solid var(--gray-200);
     z-index: 1000;
     transition: var(--transition-normal);
+    transform: translateY(0) !important; /* Prevent disappearing */
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
 }
 
 .nav-container {
@@ -169,6 +175,107 @@ h6 { font-size: 1.125rem; }
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+}
+
+.mobile-menu-btn:hover {
+    background: var(--gray-100);
+}
+
+.mobile-menu-btn span {
+    width: 24px;
+    height: 2px;
+    background: var(--dark-700);
+    border-radius: 1px;
+    transition: var(--transition-fast);
+    transform-origin: center;
+}
+
+.mobile-menu-btn span:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+/* Hamburger Animation */
+.mobile-menu-btn.active span:first-child {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.mobile-menu-btn.active span:last-child {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-top: 1px solid var(--gray-200);
+        box-shadow: var(--shadow-lg);
+        flex-direction: column;
+        align-items: stretch;
+        padding: var(--spacing-lg) 0;
+        transform: translateX(-100%);
+        transition: transform var(--transition-fast);
+        z-index: 999;
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+    
+    .nav-link {
+        padding: var(--spacing-md) var(--spacing-lg);
+        color: var(--dark-700);
+        font-size: 1.1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--gray-100);
+        display: block;
+    }
+    
+    .nav-link:hover {
+        background: var(--gray-50);
+        color: var(--primary-color);
+    }
+    
+    .nav-link:after {
+        display: none;
+    }
+    
+    .nav-title {
+        font-size: 1.1rem;
+    }
+    
+    .nav-container {
+        padding: 0 var(--spacing-md);
+    }
 }
 
 /* Hero Section */
@@ -1402,4 +1509,111 @@ h6 { font-size: 1.125rem; }
     text-align: center !important;
     line-height: 1.2 !important;
     margin-bottom: 30px !important;
+}
+
+/* Universal Mobile Styles - Works in ALL browsers */
+@media screen and (max-width: 768px) {
+    * {
+        box-sizing: border-box !important;
+    }
+    
+    html {
+        -webkit-text-size-adjust: 100% !important;
+        -ms-text-size-adjust: 100% !important;
+        text-size-adjust: 100% !important;
+    }
+    
+    body {
+        width: 100% !important;
+        min-width: 320px !important;
+        overflow-x: hidden !important;
+        font-size: 16px !important;
+    }
+    
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 16px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Universal Hero Mobile Layout - Works in Chrome, Edge, Safari, Firefox */
+    .hero-container {
+        display: block !important;
+        grid-template-columns: none !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0 16px !important;
+        float: none !important;
+        clear: both !important;
+    }
+    
+    .hero-title {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+        text-align: center !important;
+        margin-bottom: 20px !important;
+        width: 100% !important;
+        display: block !important;
+        float: none !important;
+    }
+    
+    .hero-description {
+        font-size: 18px !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+        margin-bottom: 30px !important;
+        width: 100% !important;
+        display: block !important;
+        float: none !important;
+    }
+    
+    .hero-buttons {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        float: none !important;
+    }
+    
+    .btn {
+        display: block !important;
+        width: 90% !important;
+        max-width: 280px !important;
+        margin: 0 auto 16px auto !important;
+        padding: 16px 24px !important;
+        font-size: 18px !important;
+        text-align: center !important;
+        float: none !important;
+    }
+    
+    /* Universal Features Grid - Works in all browsers */
+    .features-grid {
+        display: block !important;
+        grid-template-columns: none !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    .feature-card {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 24px !important;
+        text-align: center !important;
+        padding: 20px !important;
+        float: none !important;
+    }
+    
+    /* Universal Section Titles */
+    .section-title,
+    .contact-title,
+    .download-title,
+    .demo-title {
+        font-size: 36px !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin-bottom: 30px !important;
+        line-height: 1.2 !important;
+        display: block !important;
+        float: none !important;
+    }
 }
