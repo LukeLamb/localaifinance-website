@@ -1,0 +1,195 @@
+---
+import { Image } from "astro:assets";
+import neurotraderIcon from "../../public/assets/neurotrader_icon.png";
+
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { name: "Home", href: "/", current: currentPath === "/" },
+  { name: "Features", href: "/#features", current: false },
+  { name: "How It Works", href: "/#how-it-works", current: false },
+  { name: "Pricing", href: "/#pricing", current: false },
+  { name: "Blog", href: "/blog", current: currentPath.startsWith("/blog") },
+  { name: "Contact", href: "/contact", current: currentPath === "/contact" },
+];
+---
+
+<nav class="container-custom">
+  <div class="flex items-center justify-between h-16">
+    <div class="flex-shrink-0">
+      <a
+        href="/"
+        class="flex items-center space-x-2 group"
+        aria-label="LocalAI Finance Home"
+      >
+        <Image
+          src={neurotraderIcon}
+          alt="LocalAI Finance"
+          class="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+          width={32}
+          height={32}
+          loading="eager"
+        />
+        <span
+          class="font-bold text-xl text-gray-900 group-hover:text-primary-600 transition-colors duration-300"
+          >LocalAI Finance</span
+        >
+      </a>
+    </div>
+
+    <div class="hidden md:block">
+      <div class="ml-10 flex items-baseline space-x-4">
+        {
+          navItems.map((item) => (
+            <a
+              href={item.href}
+              class={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 ${item.current ? "text-primary-600 bg-primary-50" : "text-gray-700 hover:bg-gray-50"}`}
+              aria-current={item.current ? "page" : undefined}
+            >
+              {item.name}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="hidden md:block">
+      <a href="/contact" class="btn btn-primary text-sm px-4 py-2"
+        >Get Started</a
+      >
+    </div>
+
+    <div class="md:hidden">
+      <button
+        type="button"
+        id="mobile-menu-button"
+        class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 transition-colors duration-300"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          id="menu-icon-closed"
+          class="h-6 w-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg
+          id="menu-icon-open"
+          class="h-6 w-6 hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div
+  id="mobile-menu"
+  class="md:hidden fixed inset-0 top-16 z-30 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out"
+  style="height: calc(100vh - 4rem);"
+>
+  <div class="px-2 pt-2 pb-3 space-y-1 h-full flex flex-col">
+    <div class="flex-1 space-y-1">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class={`block px-3 py-3 rounded-md text-base font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 ${item.current ? "text-primary-600 bg-primary-50" : "text-gray-900 hover:text-primary-600 hover:bg-gray-50"}`}
+            aria-current={item.current ? "page" : undefined}
+          >
+            {item.name}
+          </a>
+        ))
+      }
+    </div>
+
+    <div class="border-t border-gray-200 pt-4 pb-6 px-3">
+      <a href="/contact" class="btn btn-primary w-full justify-center"
+        >Get Started</a
+      >
+    </div>
+  </div>
+</div>
+
+<div
+  id="mobile-menu-overlay"
+  class="md:hidden fixed inset-0 z-20 bg-black bg-opacity-25 hidden transition-opacity duration-300"
+  aria-hidden="true"
+>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+    const menuIconClosed = document.getElementById("menu-icon-closed");
+    const menuIconOpen = document.getElementById("menu-icon-open");
+
+    if (!mobileMenuButton || !mobileMenu) return;
+
+    let isMenuOpen = false;
+
+    function toggleMenu() {
+      isMenuOpen = !isMenuOpen;
+
+      if (isMenuOpen) {
+        mobileMenu.classList.remove("translate-x-full");
+        mobileMenu.classList.add("translate-x-0");
+        mobileMenuOverlay && mobileMenuOverlay.classList.remove("hidden");
+        menuIconClosed && menuIconClosed.classList.add("hidden");
+        menuIconOpen && menuIconOpen.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        mobileMenuButton.setAttribute("aria-expanded", "true");
+      } else {
+        mobileMenu.classList.remove("translate-x-0");
+        mobileMenu.classList.add("translate-x-full");
+        mobileMenuOverlay && mobileMenuOverlay.classList.add("hidden");
+        menuIconClosed && menuIconClosed.classList.remove("hidden");
+        menuIconOpen && menuIconOpen.classList.add("hidden");
+        document.body.style.overflow = "";
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+      }
+    }
+
+    mobileMenuButton.addEventListener("click", toggleMenu);
+    mobileMenuOverlay &&
+      mobileMenuOverlay.addEventListener("click", toggleMenu);
+
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (isMenuOpen) toggleMenu();
+      });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && isMenuOpen) toggleMenu();
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 768 && isMenuOpen) toggleMenu();
+    });
+  });
+</script>

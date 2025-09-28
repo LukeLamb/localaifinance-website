@@ -1,0 +1,121 @@
+---
+// Footer Component for LocalAI Finance
+import { Image } from "astro:assets";
+import neurotraderIcon from "../../public/assets/neurotrader_icon.png";
+---
+
+<footer class="section-compact bg-gray-900 text-white">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div class="md:col-span-2">
+        <div class="flex items-center space-x-2 mb-4">
+          <Image
+            src={neurotraderIcon}
+            alt="LocalAI Finance"
+            class="h-8 w-8"
+            width={32}
+            height={32}
+            loading="lazy"
+          />
+          <span class="text-xl font-bold">LocalAI Finance</span>
+        </div>
+        <p class="text-gray-400 mb-4 max-w-md">
+          Professional AI Financial Assistant - Secure, private financial
+          analysis and trading insights powered by local AI technology.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="mailto:contact@localaifinance.com"
+            class="text-gray-400 hover:text-white transition-colors"
+            aria-label="Contact us via email"
+          >
+            <span class="sr-only">Email</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+              ></path>
+              <path
+                d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Product</h3>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="/#features"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="/#how-it-works"
+              class="text-gray-400 hover:text-white transition-colors"
+              >How It Works</a
+            >
+          </li>
+          <li>
+            <a
+              href="/#pricing"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Pricing</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Resources</h3>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="/blog/"
+              class="text-gray-400 hover:text-white transition-colors">Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="/blog/local-ai-financial-privacy.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Privacy Guide</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:support@localaifinance.com"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Support</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">
+          © 2024 LocalAI Finance. All rights reserved.
+        </p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a
+            href="/privacy"
+            class="text-gray-400 hover:text-white text-sm transition-colors"
+            >Privacy Policy</a
+          >
+          >
+          <a
+            href="/terms"
+            class="text-gray-400 hover:text-white text-sm transition-colors"
+            >Terms of Service</a
+          >
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

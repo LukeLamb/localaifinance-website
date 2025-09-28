@@ -1,0 +1,336 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  noIndex?: boolean;
+}
+
+const {
+  title,
+  description = "Professional AI Financial Assistant - Secure, private financial analysis and trading insights powered by local AI technology.",
+  ogImage = "/assets/neurotrader_icon.png",
+  canonicalUrl,
+  noIndex = false,
+} = Astro.props;
+
+const siteUrl = "https://localaifinance.com";
+const fullTitle =
+  title === "Home"
+    ? "LocalAI Finance - Professional AI Financial Assistant"
+    : `${title} | LocalAI Finance`;
+const fullOgImage = ogImage.startsWith("http")
+  ? ogImage
+  : `${siteUrl}${ogImage}`;
+const fullCanonicalUrl = canonicalUrl || `${siteUrl}${Astro.url.pathname}`;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO Meta Tags -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {
+      !noIndex && (
+        <meta
+          name="robots"
+          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
+      )
+    }
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={fullCanonicalUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={fullCanonicalUrl} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:site_name" content="LocalAI Finance" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={fullCanonicalUrl} />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullOgImage} />
+    <meta name="twitter:creator" content="@LocalAIFinance" />
+
+    <!-- Favicons and PWA -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Theme and Mobile Optimization -->
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="color-scheme" content="light" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="LocalAI Finance" />
+
+    <!-- Performance and Security -->
+    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width" />
+
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="/assets/neurotrader_icon.png"
+      as="image"
+      type="image/png"
+    />
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/styles/global.css" />
+
+    <!-- Enhanced Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "LocalAI Finance",
+        "alternateName": "LocalAI",
+        "description": "Professional AI Financial Assistant - Secure, private financial analysis and trading insights powered by local AI technology.",
+        "url": "https://localaifinance.com",
+        "logo": "https://localaifinance.com/assets/neurotrader_icon.png",
+        "image": "https://localaifinance.com/assets/neurotrader_icon.png",
+        "foundingDate": "2024",
+        "sameAs": ["https://github.com/LukeLamb/localaifinance-website"],
+        "serviceType": [
+          "Financial Technology",
+          "AI Services",
+          "Financial Analysis"
+        ],
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "AI Financial Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI-Powered Financial Analysis",
+                "description": "Advanced machine learning algorithms for market analysis and trading insights"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Private Financial Data Processing",
+                "description": "Secure, local processing of financial data with complete privacy"
+              }
+            }
+          ]
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-555-0123",
+          "contactType": "customer service",
+          "availableLanguage": ["English"],
+          "areaServed": "Worldwide"
+        }
+      }
+    </script>
+
+    <!-- Website Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "LocalAI Finance",
+        "url": "https://localaifinance.com",
+        "description": "Professional AI Financial Assistant for secure, private financial analysis",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true,
+        "license": "https://localaifinance.com/terms",
+        "copyrightYear": "2024",
+        "copyrightHolder": {
+          "@type": "Organization",
+          "name": "LocalAI Finance"
+        }
+      }
+    </script>
+  </head>
+
+  <body class="font-primary bg-white text-gray-900 antialiased">
+    <!-- Skip to main content for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary-600 text-white px-4 py-2 rounded-lg z-50"
+    >
+      Skip to main content
+    </a>
+
+    <!-- Mobile-first responsive wrapper -->
+    <div class="min-h-screen flex flex-col">
+      <!-- Navigation will go here -->
+      <header
+        id="header"
+        class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200"
+      >
+        <!-- Navigation component will be inserted here -->
+        <slot name="navigation" />
+      </header>
+
+      <!-- Main Content with proper spacing for fixed header -->
+      <main id="main-content" class="flex-1 pt-16">
+        <slot />
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-gray-900 text-white">
+        <!-- Footer component will be inserted here -->
+        <slot name="footer" />
+      </footer>
+    </div>
+
+    <!-- Mobile Detection and Optimization Script -->
+    <script>
+      // Mobile detection and touch optimization
+      (function () {
+        // Add mobile class for CSS targeting
+        if (
+          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          )
+        ) {
+          document.documentElement.classList.add("is-mobile");
+        }
+
+        // Touch device detection
+        if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+          document.documentElement.classList.add("is-touch");
+        }
+
+        // Viewport height fix for mobile browsers
+        function setVH() {
+          const vh = window.innerHeight * 0.01;
+          document.documentElement.style.setProperty("--vh", `${vh}px`);
+        }
+
+        setVH();
+        window.addEventListener("resize", setVH);
+        window.addEventListener("orientationchange", () => {
+          setTimeout(setVH, 500);
+        });
+
+        // Prevent zoom on double-tap for better UX
+        let lastTouchEnd = 0;
+        document.addEventListener(
+          "touchend",
+          function (event) {
+            const now = new Date().getTime();
+            if (now - lastTouchEnd <= 300) {
+              event.preventDefault();
+            }
+            lastTouchEnd = now;
+          },
+          false
+        );
+
+        // Smooth scroll polyfill for Safari iOS
+        if (!CSS.supports("scroll-behavior", "smooth")) {
+          const script = document.createElement("script");
+          script.src =
+            "https://cdn.jsdelivr.net/gh/iamdustan/smoothscroll@1.4.10/src/smoothscroll.min.js";
+          document.head.appendChild(script);
+        }
+      })();
+    </script>
+
+    <!-- Performance monitoring -->
+    <script>
+      // Basic performance monitoring
+      window.addEventListener("load", function () {
+        // Log Core Web Vitals if available
+        if ("web-vitals" in window) {
+          // Would integrate with actual monitoring service
+          console.log("Page loaded successfully");
+        }
+      });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log("SW registered: ", registration);
+            })
+            .catch((registrationError) => {
+              console.log("SW registration failed: ", registrationError);
+            });
+        });
+      }
+    </script>
+
+    <!-- Scroll-Triggered Animations -->
+    <script>
+      // Enhanced scroll animations using Intersection Observer
+      document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-in");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        // Observe elements with animation classes
+        document
+          .querySelectorAll(
+            ".animate-fade-in, .animate-slide-up, .feature-card"
+          )
+          .forEach((el) => {
+            observer.observe(el);
+          });
+      });
+    </script>
+
+    <!-- Core Web Vitals Monitoring -->
+    <script src="/web-vitals.js" is:inline></script>
+  </body>
+</html>

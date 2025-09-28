@@ -1,0 +1,320 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Home"
+  description="Professional AI Financial Assistant - Secure, private financial analysis and trading insights powered by local AI technology. Experience the future of financial analysis with our advanced AI assistant."
+>
+  <Navigation slot="navigation" />
+
+  <!-- Hero Section -->
+  <section
+    id="hero"
+    class="section bg-gradient-to-br from-blue-50 via-white to-emerald-50"
+  >
+    <div class="container-custom">
+      <div class="text-center">
+        <h1 class="text-hero font-bold gradient-text mb-6 animate-fade-in">
+          Professional AI Financial Assistant
+        </h1>
+        <p
+          class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto animate-slide-up"
+        >
+          Secure, private financial analysis and trading insights powered by <strong
+            >local AI technology</strong
+          >. Experience the future of financial analysis.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up"
+        >
+          <a
+            href="#features"
+            class="btn btn-primary text-lg px-8 py-4 shadow-xl hover:shadow-2xl"
+          >
+            Explore Features
+          </a>
+          <a href="/blog/" class="btn btn-outline text-lg px-8 py-4">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section-compact bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-section-title font-bold text-gray-900 mb-4">
+          Powerful Features
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Advanced AI capabilities designed for professional financial analysis
+          and trading.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="feature-card text-center">
+          <div
+            class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-8 h-8 text-primary-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            AI-Powered Analysis
+          </h3>
+          <p class="text-gray-600">
+            Advanced machine learning algorithms analyze market trends,
+            financial data, and trading patterns with unprecedented accuracy.
+          </p>
+        </div>
+
+        <div class="feature-card text-center">
+          <div
+            class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-8 h-8 text-secondary-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            Complete Privacy
+          </h3>
+          <p class="text-gray-600">
+            Your financial data stays completely private. Local processing means
+            your sensitive information never leaves your device.
+          </p>
+        </div>
+
+        <div class="feature-card text-center">
+          <div
+            class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-8 h-8 text-accent-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            Lightning Fast
+          </h3>
+          <p class="text-gray-600">
+            Real-time analysis and insights delivered in milliseconds. Make
+            informed decisions faster than ever before.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-section-title font-bold text-gray-900 mb-4">
+          How It Works
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Simple, powerful, and completely private. Get started in minutes.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div
+            class="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+          >
+            1
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            Install & Setup
+          </h3>
+          <p class="text-gray-600">
+            Download and install LocalAI Finance on your device. Quick setup
+            process takes less than 5 minutes.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div
+            class="w-12 h-12 bg-secondary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+          >
+            2
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            Connect Your Data
+          </h3>
+          <p class="text-gray-600">
+            Securely connect your trading accounts and financial data sources.
+            All data processing happens locally.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div
+            class="w-12 h-12 bg-accent-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+          >
+            3
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Get Insights</h3>
+          <p class="text-gray-600">
+            Receive intelligent analysis, trading recommendations, and market
+            insights powered by advanced AI.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta" class="section bg-gradient-primary">
+    <div class="container-custom text-center">
+      <h2 class="text-section-title font-bold text-white mb-4">
+        Ready to Transform Your Trading?
+      </h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        Join thousands of traders who have already upgraded their financial
+        analysis with LocalAI Finance.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="#contact"
+          class="btn bg-white text-primary-600 hover:bg-gray-50 text-lg px-8 py-4 shadow-xl"
+        >
+          Get Started Today
+        </a>
+        <a
+          href="/blog/"
+          class="btn border-2 border-white text-white hover:bg-white hover:text-primary-600 text-lg px-8 py-4"
+        >
+          Read Success Stories
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer slot="footer" />
+</Layout>
+            <a
+              href="mailto:contact@localaifinance.com"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <span class="sr-only">Email</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+                ></path>
+                <path
+                  d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Product</h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="/#features"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Features</a>
+            </li>
+            <li>
+              <a
+                href="/#how-it-works"
+                class="text-gray-400 hover:text-white transition-colors"
+                >How It Works</a>
+            </li>
+            <li>
+              <a
+                href="/#pricing"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Pricing</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Resources</h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="/blog/"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Blog</a>
+            </li>
+            <li>
+              <a
+                href="/blog/local-ai-financial-privacy.html"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Privacy Guide</a>
+            </li>
+            <li>
+              <a
+                href="mailto:support@localaifinance.com"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Support</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm">
+            © 2024 LocalAI Finance. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="/privacy"
+              class="text-gray-400 hover:text-white text-sm transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="/terms"
+              class="text-gray-400 hover:text-white text-sm transition-colors"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</Layout>

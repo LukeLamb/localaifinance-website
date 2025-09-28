@@ -5,6 +5,7 @@ npm-debug.log*
 # Build outputs
 dist/
 build/
+.astro/
 
 # Environment variables
 .env

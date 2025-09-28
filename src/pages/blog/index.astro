@@ -1,0 +1,333 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navigation from "../../components/Navigation.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout
+  title="Blog - Local AI Financial Privacy Solutions"
+  description="Explore insights on financial privacy, AI solutions, and secure data management. Learn how Local AI Finance keeps your data private."
+>
+  <Navigation slot="navigation" />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-20">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Insights & Updates
+          </h1>
+          <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Stay informed about financial privacy, AI innovations, and secure
+            data management practices. Discover how we're revolutionizing
+            private financial solutions.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#featured"
+              class="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors"
+            >
+              <svg
+                class="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+              </svg>
+              Read Featured Article
+            </a>
+            <a
+              href="#subscribe"
+              class="inline-flex items-center px-6 py-3 border-2 border-primary-600 text-primary-600 font-semibold rounded-lg hover:bg-primary-600 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 17h5l-5 5-5-5h5v-12"></path>
+              </svg>
+              Subscribe to Updates
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Article Section -->
+    <section id="featured" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Featured Article
+            </h2>
+            <div class="w-20 h-1 bg-primary-600 mx-auto"></div>
+          </div>
+
+          <!-- Featured Article Card -->
+          <article
+            class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+          >
+            <div class="md:flex">
+              <div class="md:w-1/2">
+                <div
+                  class="h-64 md:h-full bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center"
+                >
+                  <div class="text-center p-8">
+                    <svg
+                      class="w-20 h-20 text-primary-600 mx-auto mb-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                      ></path>
+                    </svg>
+                    <p class="text-primary-700 font-medium">
+                      Privacy & Security
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="md:w-1/2 p-8">
+                <div class="flex items-center text-sm text-gray-500 mb-3">
+                  <time datetime="2024-01-15">January 15, 2024</time>
+                  <span class="mx-2">•</span>
+                  <span>5 min read</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  <a
+                    href="/blog/local-ai-financial-privacy"
+                    class="hover:text-primary-600 transition-colors"
+                  >
+                    Why Local AI is the Future of Financial Privacy
+                  </a>
+                </h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                  Discover how local AI processing revolutionizes financial data
+                  privacy. Learn why keeping your sensitive financial
+                  information on your own devices, rather than sending it to
+                  cloud servers, is crucial for maintaining complete control
+                  over your personal data.
+                </p>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-3">
+                    <div
+                      class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center"
+                    >
+                      <span class="text-primary-600 font-semibold text-sm"
+                        >LA</span
+                      >
+                    </div>
+                    <div>
+                      <p class="font-medium text-gray-900">Local AI Team</p>
+                      <p class="text-sm text-gray-500">Privacy Experts</p>
+                    </div>
+                  </div>
+                  <a
+                    href="/blog/local-ai-financial-privacy"
+                    class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors"
+                  >
+                    Read More
+                    <svg
+                      class="w-4 h-4 ml-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">
+            More Articles Coming Soon
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Upcoming Article 1 -->
+            <div
+              class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 opacity-75"
+            >
+              <div
+                class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6 text-secondary-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H9z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                Local AI vs Cloud Analytics
+              </h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Compare the benefits of local processing versus cloud-based
+                financial analytics.
+              </p>
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+                >Coming Soon</span
+              >
+            </div>
+
+            <!-- Upcoming Article 2 -->
+            <div
+              class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 opacity-75"
+            >
+              <div
+                class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6 text-accent-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                Speed of Local Processing
+              </h3>
+              <p class="text-gray-600 text-sm mb-4">
+                How local AI delivers faster results without network latency.
+              </p>
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+                >Coming Soon</span
+              >
+            </div>
+
+            <!-- Upcoming Article 3 -->
+            <div
+              class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 opacity-75"
+            >
+              <div
+                class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6 text-primary-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                Data Security Best Practices
+              </h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Essential security measures for protecting financial data.
+              </p>
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+                >Coming Soon</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section
+      id="subscribe"
+      class="py-16 bg-gradient-to-r from-primary-600 to-secondary-600"
+    >
+      <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+          <p class="text-primary-100 mb-8">
+            Subscribe to our newsletter to receive the latest insights on
+            financial privacy and AI innovations.
+          </p>
+
+          <!-- Newsletter Form -->
+          <form
+            name="newsletter"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+          >
+            <input type="hidden" name="form-name" value="newsletter" />
+
+            <!-- Honeypot field -->
+            <div style="display: none;">
+              <label
+                >Don't fill this out if you're human: <input
+                  name="bot-field"
+                /></label
+              >
+            </div>
+
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Enter your email address"
+              class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-white focus:border-transparent"
+            />
+            <button
+              type="submit"
+              class="px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Subscribe
+            </button>
+          </form>
+
+          <p class="text-primary-100 text-sm mt-4">
+            No spam, unsubscribe at any time. Your privacy is our priority.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer slot="footer" />
+</Layout>

@@ -1,6 +1,6 @@
 # 🚀 Gaia Financial Assistant - Full Website Rebuild Plan
 
-**Option A: Complete Astro + Tailwind Rebuild**
+Option A: Complete Astro + Tailwind Rebuild**
 
 ---
 
