@@ -1234,3 +1234,95 @@ h6 { font-size: 1.125rem; }
 }
 .mt-4 { margin-top: var(--spacing-lg); }
 .mt-5 { margin-top: var(--spacing-xl); }
+
+/* FORCE MOBILE LAYOUT - Critical Mobile Fixes */
+@media screen and (max-width: 768px) {
+    html {
+        -webkit-text-size-adjust: none !important;
+        -ms-text-size-adjust: none !important;
+    }
+    
+    body {
+        width: 100% !important;
+        min-width: 320px !important;
+        overflow-x: hidden !important;
+        font-size: 16px !important;
+    }
+    
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 16px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* FORCE Hero Mobile Layout */
+    .hero-container {
+        display: block !important;
+        grid-template-columns: none !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0 16px !important;
+    }
+    
+    .hero-title {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+        text-align: center !important;
+        margin-bottom: 16px !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    
+    .hero-description {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+        text-align: center !important;
+        margin-bottom: 24px !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    
+    .hero-buttons {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .btn {
+        display: block !important;
+        width: 90% !important;
+        max-width: 280px !important;
+        margin: 0 auto 16px auto !important;
+        padding: 16px 24px !important;
+        font-size: 16px !important;
+        text-align: center !important;
+    }
+    
+    /* FORCE Features Grid Mobile */
+    .features-grid {
+        display: block !important;
+        grid-template-columns: none !important;
+        width: 100% !important;
+    }
+    
+    .feature-card {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 24px !important;
+        text-align: center !important;
+        padding: 20px !important;
+    }
+    
+    /* FORCE Section Titles */
+    .section-title,
+    .contact-title,
+    .download-title,
+    .demo-title {
+        font-size: 32px !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin-bottom: 24px !important;
+        line-height: 1.2 !important;
+    }
+}
